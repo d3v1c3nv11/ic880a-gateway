@@ -119,7 +119,7 @@ popd
 
 # Build LoRa gateway app
 if [ ! -d lora_gateway ]; then
-    git clone -b legacy https://github.com/TheThingsNetwork/lora_gateway.git
+    git clone -b legacy https://github.com/d3v1c3nv11/lora_gateway.git
     pushd lora_gateway
 else
     pushd lora_gateway
@@ -128,11 +128,11 @@ else
     git reset --hard
 fi
 
-cp ./libloragw/99-libftdi.rules /etc/udev/rules.d/99-libftdi.rules
+#cp ./libloragw/99-libftdi.rules /etc/udev/rules.d/99-libftdi.rules
 
 sed -i -e 's/CFG_SPI= native/CFG_SPI= ftdi/g' ./libloragw/library.cfg
 sed -i -e 's/PLATFORM= kerlink/PLATFORM= lorank/g' ./libloragw/library.cfg
-sed -i -e 's/ATTRS{idProduct}=="6010"/ATTRS{idProduct}=="6014"/g' /etc/udev/rules.d/99-libftdi.rules
+#sed -i -e 's/ATTRS{idProduct}=="6010"/ATTRS{idProduct}=="6014"/g' /etc/udev/rules.d/99-libftdi.rules
 
 make
 
@@ -140,7 +140,7 @@ popd
 
 # Build packet forwarder
 if [ ! -d packet_forwarder ]; then
-    git clone -b legacy https://github.com/TheThingsNetwork/packet_forwarder.git
+    git clone -b legacy https://github.com/d3v1c3nv11/packet_forwarder.git
     pushd packet_forwarder
 else
     pushd packet_forwarder
