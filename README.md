@@ -17,7 +17,7 @@ This installer targets only this board, if you have any other, [check this repo]
 - Use `olinuxino-config` utility to enable SPI2:
 
         $ sudo olinuxino-overlay
-
+Be sure ```[*] sun7i-a20-spi2.dtbo               Enable SPI2 bus```   is selected
 - Reboot
 - Configure locales and time zone:
 
