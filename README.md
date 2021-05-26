@@ -1,23 +1,22 @@
 # The Things Network: iC880a-based gateway
 
-Reference setup for [The Things Network](http://thethingsnetwork.org/) gateways based on the iC880a USB concentrator with a Raspberry Pi host.
+Reference setup for [The Things Network](http://thethingsnetwork.org/) gateways based on the iC880a Olimex LoRaWAN-Gateway with Lime2 host.
 
-This installer targets the **USB version** of the board, if you have the SPI version, [check this branch](https://github.com/ttn-zh/ic880a-gateway/tree/spi).
+This installer targets only this board, if you have any other, [check this repo](https://github.com/ttn-zh/ic880a-gateway/).
 
-## Setup based on Raspbian image
+## Setup based on Olimage
 
-- Download [Raspbian Jessie Lite](https://www.raspberrypi.org/downloads/)
-- Follow the [installation instruction](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) to create the SD card
-- Start your RPi connected to Ethernet
-- Plug the iC880a (**WARNING**: first power plug to the wall socket, then to the gateway DC jack, and ONLY THEN USB to RPi!)
+- Download [Latest minimal olimage](http://images.olimex.com/release/a20/)
+- Create the SD card
+- Start your LoRaWAN-Gateway connected to Ethernet
 - From a computer in the same LAN, `ssh` into the RPi using the default hostname:
 
-        local $ ssh pi@raspberrypi.local
+        local $ ssh olimex@a20-olinuxino
 
-- Default password of a plain-vanilla RASPBIAN install for user `pi` is `raspberry`
-- Use `raspi-config` utility to expand the filesystem (1 Expand filesystem):
+- Default password for user `olimex` is `olimex`
+- Use `olinuxino-config` utility to enable SPI2:
 
-        $ sudo raspi-config
+        $ sudo olinuxino-config
 
 - Reboot
 - Configure locales and time zone:
@@ -44,9 +43,9 @@ Add the line `ttn ALL=(ALL) NOPASSWD: ALL`
 
 :warning: Beware this allows a connected console with the ttn user to issue any commands on your system, without any password control. This step is completely optional and remains your decision.
 
-- Logout and login as `ttn` and remove the default `pi` user
+- Logout and login as `ttn` and remove the default `olimex` user
 
-        $ sudo userdel -rf pi
+        $ sudo userdel -rf olimex
 
 - Configure the wifi credentials (check [here for additional details](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
 
