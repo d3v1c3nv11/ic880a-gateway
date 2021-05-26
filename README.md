@@ -57,6 +57,10 @@ Add the line `ttn ALL=(ALL) NOPASSWD: ALL`
 - If you want to use the remote configuration option, please make sure you have created a JSON file named as your gateway EUI (e.g. `B827EBFFFE7B80CD.json`) in the [Gateway Remote Config repository](https://github.com/ttn-zh/gateway-remote-config). 
 - **Big Success!** You should now have a running gateway in front of you!
 
+Login as 'ttn' to 'ttn-gateway':
+
+```ssh ttn@ttn-gateway```
+
 # Credits
 
 These scripts are largely based on the awesome work by [Ruud Vlaming](https://github.com/devlaam) on the [Lorank8 installer](https://github.com/Ideetron/Lorank).
