@@ -151,7 +151,6 @@ else
 fi
 
 sed -i -e 's/IOT_SK_SX1301_RESET_PIN=7/IOT_SK_SX1301_RESET_PIN=50/g' ./reset_pkt_fwd.sh
-cp reset_pkt_fwd.sh ../bin/reset_pkt_fwd.sh
 
 make
 
