@@ -8,7 +8,7 @@ if [ $UID != 0 ]; then
     exit 1
 fi
 
-if [[ 'ls /dev | grep devspi2.0' == "" ]];then
+if [[ 'ls /dev | grep spidev2.0' == "" ]];then
     echo "ERROR: You have to enable spidev first!!! Read instructions!!!"
     exit 1
 fi
