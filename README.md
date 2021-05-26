@@ -16,7 +16,7 @@ This installer targets only this board, if you have any other, [check this repo]
 - Default password for user `olimex` is `olimex`
 - Use `olinuxino-config` utility to enable SPI2:
 
-        $ sudo olinuxino-config
+        $ sudo olinuxino-overlay
 
 - Reboot
 - Configure locales and time zone:
