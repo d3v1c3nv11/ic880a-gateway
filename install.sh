@@ -8,6 +8,11 @@ if [ $UID != 0 ]; then
     exit 1
 fi
 
+if [ ls /dev/devspi2.0 == "" ];then
+    echo "ERROR: You have to enable spidev first!!! Read instructions!!!"
+    exit 1
+fi
+
 VERSION="master"
 if [[ $1 != "" ]]; then VERSION=$1; fi
 
