@@ -14,11 +14,18 @@ This installer targets only this board, if you have any other, [check this repo]
         local $ ssh olimex@a20-olinuxino
 
 - Default password for user `olimex` is `olimex`
-- Use `olinuxino-config` utility to enable SPI2:
+
+If this is the very first login to board, you have to reboot!
+``` $ sudo reboot
+
+- Login again and use `olinuxino-config` utility to check/enable SPI2:
 
         $ sudo olinuxino-overlay
-Be sure ```[*] sun7i-a20-spi2.dtbo               Enable SPI2 bus```   is selected
-- Reboot
+Be sure both ```[*] sun7i-a20-spi2.dtbo               Enable SPI2 bus
+[*] spi2-spidev.dtbo                  Enable spidev on SPI2 ```   are selected
+
+- Reboot if made any changes
+
 - Configure locales and time zone:
 
         $ sudo dpkg-reconfigure locales
