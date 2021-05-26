@@ -98,7 +98,7 @@ fi
 
 # Check dependencies
 echo "Installing dependencies..."
-apt-get install swig libftdi-dev python-dev gpiod libgpiod2
+apt-get install swig libftdi-dev python-dev gpiod libgpiod2 build-essential
 
 # Install LoRaWAN packet forwarder repositories
 INSTALL_DIR="/opt/ttn-gateway"
