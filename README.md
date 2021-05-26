@@ -9,7 +9,7 @@ This installer targets only this board, if you have any other, [check this repo]
 - Download [Latest minimal olimage](http://images.olimex.com/release/a20/)
 - Create the SD card
 - Start your LoRaWAN-Gateway connected to Ethernet
-- From a computer in the same LAN, `ssh` into the RPi using the default hostname:
+- From a computer in the same LAN, `ssh` into the gateway using the default hostname:
 
         local $ ssh olimex@a20-olinuxino
 
