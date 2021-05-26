@@ -21,8 +21,10 @@ If this is the very first login to board, you have to reboot!
 - Login again and use `olinuxino-config` utility to check/enable SPI2:
 
         $ sudo olinuxino-overlay
-Be sure both ```[*] sun7i-a20-spi2.dtbo               Enable SPI2 bus
-[*] spi2-spidev.dtbo                  Enable spidev on SPI2 ```   are selected
+Be sure both 
+```[*] sun7i-a20-spi2.dtbo               Enable SPI2 bus```
+```[*] spi2-spidev.dtbo                  Enable spidev on SPI2 ```   
+are selected
 
 - Reboot if made any changes
 
