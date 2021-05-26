@@ -18,7 +18,7 @@ This installer targets only this board, if you have any other, [check this repo]
 If this is the very first login to board, you have to reboot!
 ``` $ sudo reboot   ```
 
-- Login again and use `olinuxino-config` utility to check/enable SPI2:
+- Login again and use `olinuxino-overlay` utility to check/enable SPI2:
 
         $ sudo olinuxino-overlay
 Be sure both 
