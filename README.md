@@ -16,7 +16,7 @@ This installer targets only this board, if you have any other, [check this repo]
 - Default password for user `olimex` is `olimex`
 
 If this is the very first login to board, you have to reboot!
-``` $ sudo reboot
+``` $ sudo reboot   ```
 
 - Login again and use `olinuxino-config` utility to check/enable SPI2:
 
