@@ -70,6 +70,10 @@ Login as 'ttn' to 'ttn-gateway':
 
 ```ssh ttn@ttn-gateway```
 
+- Postconfig
+
+There are two config files located in the working directory /opt/ttn-gateway/bin global_conf.json and local_conf.json. The global_conf.json contains frequency plan and you have to download from gateway config at The Thing Network server. Gateway EUI and gateway server address are stored in local_conf.json.
+
 # Credits
 
 These scripts are largely based on the awesome work by [Ruud Vlaming](https://github.com/devlaam) on the [Lorank8 installer](https://github.com/Ideetron/Lorank).
