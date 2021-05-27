@@ -84,9 +84,9 @@ else
     read GATEWAY_ALT
     if [[ $GATEWAY_ALT == "" ]]; then GATEWAY_ALT=0; fi
     
-    printf "       Server address [ router.eu.thethings.network ]: "
+    printf "       Server address [ eu1.cloud.thethings.network ]: "
     read SERVER_ADDRESS
-    if [[ $SERVER_ADDRESS == "" ]]; then SERVER_ADDRESS="router.eu.thethings.network"; fi
+    if [[ $SERVER_ADDRESS == "" ]]; then SERVER_ADDRESS="eu1.cloud.thethings.network"; fi
     
 fi
 
